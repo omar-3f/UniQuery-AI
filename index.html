@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bayview International University (BIU), চট্টগ্রাম — পাঁচটি স্নাতক বিভাগ, ভর্তির যোগ্যতা, ফি, স্কলারশিপ, গুরুত্বপূর্ণ তারিখ ও যোগাযোগের তথ্য।"
+    />
+    <title>Bayview International University — ভর্তি তথ্য</title>
+    <script>
+      try {
+        var storedTheme = localStorage.getItem('uniquery-theme')
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        document.documentElement.dataset.theme =
+          storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : prefersDark ? 'dark' : 'light'
+      } catch (error) {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="privacy-strip">
+      <span class="strip-dot" aria-hidden="true"></span>
+      <span data-i18n="topNotice">বিশ্ববিদ্যালয়ের অফিসিয়াল ভর্তি তথ্য থেকে উত্তর · কোনো অনুমান নয়</span>
+      <span class="strip-right" data-i18n="topRight">লাইভ সহায়ক · ফল ২০২৭</span>
+    </div>
+
+    <header class="site-header">
+      <a class="logo" href="#top">
+        <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 2.2l8 2.9v6.6c0 4.9-3.3 8.4-8 9.9-4.7-1.5-8-5-8-9.9V5.1l8-2.9z" fill="#39ff14" stroke="#0b0b0a" stroke-width="1.4" />
+          <path d="M8.3 12.1l2.6 2.6 5-5.2" fill="none" stroke="#0b0b0a" stroke-width="1.9" />
+        </svg>
+        <span class="logo-uni">Bayview International University</span>
+      </a>
+
+      <nav aria-label="Main">
+        <a href="#departments" data-i18n="navDepartments">বিভাগ</a>
+        <a href="#waiver" data-i18n="navWaiver">স্কলারশিপ</a>
+        <a href="#calculator" data-i18n="navCalc">হিসাব</a>
+        <a href="#dates" data-i18n="navDates">তারিখ</a>
+        <a href="#checklist" data-i18n="navChecklist">চেকলিস্ট</a>
+        <a href="#contact" data-i18n="navContact">যোগাযোগ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          type="button"
+          id="theme-toggle"
+          class="theme-toggle"
+          aria-pressed="false"
+          aria-label="Dark mode"
+          title="Dark mode"
+        >
+          <span class="theme-icon theme-icon--moon" aria-hidden="true">☾</span>
+          <span class="theme-icon theme-icon--sun" aria-hidden="true">☀</span>
+        </button>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="bn" aria-pressed="true">বাং</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <a class="dark-button" href="chat.html">
+          <span data-i18n="headerCta">ভর্তি নিয়ে AI-কে জিজ্ঞেস করুন</span>
+          <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-grid">
+          <div class="hero-inner">
+            <span class="hero-badge" data-i18n="heroBadge">✓ ভর্তি চলছে · ফল ২০২৭</span>
+            <p class="live-line">
+              <i aria-hidden="true"></i>
+              <span data-i18n="liveLine">৫টি স্নাতক বিভাগ · ক্যাম্পাস চট্টগ্রামে · ফল ২০২৭</span>
+            </p>
+
+            <h1>
+              <span data-i18n="heroName1">বেয়ভিউ ইন্টারন্যাশনাল</span>
+              <mark data-i18n="heroName2">ইউনিভার্সিটি</mark>
+            </h1>
+
+            <p class="hero-copy" data-i18n="heroCopy">
+              চট্টগ্রামের বেসরকারি বিশ্ববিদ্যালয় — পাঁচটি স্নাতক বিভাগ, বছরে দুইবার ভর্তি (স্প্রিং ও ফল)। যোগ্যতা, ফি, স্কলারশিপ, তারিখ ও ভর্তির ধাপ নিচে দেখে নিন।
+            </p>
+
+            <div class="hero-pills">
+              <span data-i18n="pill1">৫টি স্নাতক বিভাগ</span>
+              <span data-i18n="pill2">বছরে দুইবার ভর্তি</span>
+              <span data-i18n="pill3">ক্লাস ক্যাম্পাসে</span>
+            </div>
+
+            <div class="hero-actions">
+              <a class="dark-button large" href="#departments" data-i18n="heroCta1">ভর্তি তথ্য দেখুন</a>
+              <a class="outline-button large" href="#about" data-i18n="heroCta2">আমাদের সম্পর্কে</a>
+            </div>
+          </div>
+
+          <aside class="hero-facts" aria-label="Admission at a glance">
+            <div class="facts-head">
+              <strong data-i18n="factsTitle">ভর্তি এক নজরে</strong>
+              <span id="facts-intake">Fall 2027</span>
+            </div>
+            <div class="facts-rows" id="facts-rows"></div>
+            <p class="facts-note" data-i18n="factsNote">৫টি স্নাতক বিভাগ · ক্লাস ক্যাম্পাসে · ভর্তি বছরে দুইবার</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="summary-bar" aria-label="At a glance">
+        <div>
+          <small data-i18n="stat1Label">বিভাগ</small>
+          <strong data-i18n="stat1Value">৫টি</strong>
+          <span data-i18n="stat1Note">স্নাতক প্রোগ্রাম</span>
+        </div>
+        <div>
+          <small data-i18n="stat2Label">ভর্তি</small>
+          <strong data-i18n="stat2Value">বছরে ২ বার</strong>
+          <span data-i18n="stat2Note">স্প্রিং ও ফল</span>
+        </div>
+        <div>
+          <small data-i18n="stat3Label">উত্তরের ভাষা</small>
+          <strong data-i18n="stat3Value">৩টি</strong>
+          <span data-i18n="stat3Note">বাংলা · English · Banglish</span>
+        </div>
+      </section>
+
+      <section class="about-section container" id="about">
+        <div class="about-grid">
+          <figure class="about-media">
+            <img
+              src="/university.webp"
+              alt="বেয়ভিউ ইন্টারন্যাশনাল ইউনিভার্সিটির মূল ফটক"
+              data-i18n-alt="aboutAlt"
+              loading="lazy"
+            />
+            <figcaption data-i18n="aboutCaption">বেয়ভিউ ইন্টারন্যাশনাল ইউনিভার্সিটি, চট্টগ্রাম</figcaption>
+          </figure>
+
+          <div class="about-copy">
+            <p class="about-eyebrow" data-i18n="aboutEyebrow">আমাদের সম্পর্কে</p>
+            <h2 data-i18n="aboutTitle">বেয়ভিউ ইন্টারন্যাশনাল ইউনিভার্সিটি</h2>
+            <div class="about-blocks">
+              <article>
+                <h3 data-i18n="storyTitle">আমাদের গল্প</h3>
+                <p id="about-story"></p>
+              </article>
+              <article>
+                <h3 data-i18n="missionTitle">আমাদের লক্ষ্য</h3>
+                <p id="about-mission"></p>
+              </article>
+              <article>
+                <h3 data-i18n="visionTitle">আমাদের ভিশন</h3>
+                <p id="about-vision"></p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ledger-section container" id="departments">
+        <div class="section-heading">
+          <p data-i18n="deptTitle">বিভাগ ও প্রোগ্রাম</p>
+          <span data-i18n="deptSub">পাঁচটি বিভাগ · প্রতি সেমিস্টারের আনুমানিক খরচ</span>
+        </div>
+
+        <div class="dept-grid" id="dept-grid"></div>
+        <p class="section-note" data-i18n="deptNote">
+          হিসাব ১২–১৫ ক্রেডিট, সেমিস্টার ফি ও ল্যাব ফি ধরে করা। যেকোনো বিভাগে ক্লিক করে চ্যাটে জিজ্ঞেস করা যায়।
+        </p>
+      </section>
+
+      <section class="ledger-section container" id="waiver">
+        <div class="section-heading">
+          <p data-i18n="waiverTitle">স্কলারশিপ ও টিউশন ছাড়</p>
+          <span data-i18n="waiverSub">এইচএসসি জিপিএ দিয়ে নিজেই যাচাই করুন</span>
+        </div>
+
+        <div class="waiver-grid">
+          <div class="calc-box">
+            <div class="box-head">
+              <h2 data-i18n="waiverCheckTitle">আমার ছাড় কত?</h2>
+              <span data-i18n="waiverTag">বিশ্ববিদ্যালয়ের ডেটা থেকে</span>
+            </div>
+
+            <div class="calc-fields">
+              <label class="calc-field">
+                <span data-i18n="waiverGpa">এইচএসসি জিপিএ (৫.০০-এর মধ্যে)</span>
+                <input type="number" id="waiver-gpa" min="0" max="5" step="0.01" inputmode="decimal" value="4.9" />
+              </label>
+              <label class="calc-field">
+                <span data-i18n="waiverCategory">শিক্ষার্থীর ধরন</span>
+                <select id="waiver-category">
+                  <option value="none" data-i18n="catNone">সাধারণ শিক্ষার্থী</option>
+                  <option value="female" data-i18n="catFemale">ছাত্রী</option>
+                  <option value="freedomFighter" data-i18n="catFf">মুক্তিযোদ্ধার সন্তান</option>
+                </select>
+              </label>
+              <label class="calc-field">
+                <span data-i18n="waiverDept">বিভাগ</span>
+                <select id="waiver-dept"></select>
+              </label>
+              <label class="calc-field">
+                <span data-i18n="waiverCredits">প্রতি সেমিস্টারে ক্রেডিট</span>
+                <input type="number" id="waiver-credits" min="1" max="24" step="1" inputmode="numeric" value="15" />
+              </label>
+            </div>
+
+            <div class="calc-result" id="waiver-result" aria-live="polite"></div>
+          </div>
+
+          <div class="waiver-rules">
+            <h2 data-i18n="waiverRulesTitle">ছাড়ের নিয়ম</h2>
+            <ul id="waiver-list"></ul>
+            <p class="fine-print" id="waiver-note"></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="ledger-section container" id="calculator">
+        <div class="section-heading">
+          <p data-i18n="calcTitle">ক্রেডিট ও খরচের হিসাব</p>
+          <span data-i18n="calcSub">ক্রেডিট বদলে সেমিস্টার ও পুরো প্রোগ্রামের খরচ</span>
+        </div>
+
+        <div class="calc-box calc-box--solo">
+          <div class="calc-fields">
+            <label class="calc-field">
+              <span data-i18n="calcDept">বিভাগ</span>
+              <select id="calc-dept"></select>
+            </label>
+            <label class="calc-field">
+              <span data-i18n="calcCredits">প্রতি সেমিস্টারে ক্রেডিট</span>
+              <input type="number" id="calc-credits" min="1" max="24" step="1" inputmode="numeric" value="15" />
+            </label>
+          </div>
+
+          <dl class="calc-rows" id="calc-rows" aria-live="polite"></dl>
+          <p class="calc-hint" id="calc-note"></p>
+        </div>
+      </section>
+
+      <section class="ledger-section container" id="dates">
+        <div class="section-heading">
+          <p data-i18n="datesTitle">গুরুত্বপূর্ণ তারিখ</p>
+          <span id="intake-label">Fall 2027</span>
+        </div>
+        <div class="date-grid" id="date-grid"></div>
+      </section>
+
+      <section class="dark-section" id="facilities">
+        <div class="container dark-grid">
+          <div>
+            <p class="eyebrow" data-i18n="facEyebrow">ক্যাম্পাস</p>
+            <h2 data-i18n="facTitle">পড়ার জন্য যা যা আছে।</h2>
+            <p class="fac-intro" data-i18n="facIntro">
+              ল্যাব, লাইব্রেরি, ক্যাফেটেরিয়া, হোস্টেল আর বাস সার্ভিস — ক্যাম্পাসে কী কী আছে এক জায়গায় দেখে নিন।
+            </p>
+          </div>
+          <div class="how-list" id="facility-list"></div>
+        </div>
+      </section>
+
+      <section class="container checklist-section" id="checklist">
+        <div class="check-grid">
+          <div class="check-box">
+            <div class="box-head">
+              <h2 data-i18n="checklistTitle">ভর্তি চেকলিস্ট</h2>
+              <span id="checklist-progress">০/৭</span>
+            </div>
+            <ul id="checklist-items" class="checklist"></ul>
+            <button type="button" id="reset-checklist" class="text-link" data-i18n="checklistReset">চেকলিস্ট রিসেট</button>
+          </div>
+
+          <div class="contact-box" id="contact">
+            <h2 data-i18n="contactTitle">অ্যাডমিশন অফিস</h2>
+            <p id="contact-office" class="contact-office"></p>
+            <p id="contact-hours" class="muted"></p>
+            <dl class="contact-rows">
+              <div>
+                <dt data-i18n="contactEmail">ইমেইল</dt>
+                <dd><a id="contact-email" href="mailto:admission@biu.example"></a></dd>
+              </div>
+              <div>
+                <dt data-i18n="contactPhone">ফোন</dt>
+                <dd><a id="contact-phone" href="tel:+8801700000000"></a></dd>
+              </div>
+            </dl>
+            <div class="contact-map">
+              <iframe
+                title="Google Map — Chattogram"
+                data-i18n-title="mapTitle"
+                src="https://maps.google.com/maps?q=Chattogram%2C%20Bangladesh&z=12&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+              <p data-i18n="mapNote">গুগল ম্যাপে চট্টগ্রাম শহরের অবস্থান</p>
+            </div>
+            <p class="fine-print" data-i18n="contactFine">
+              ফি, তারিখ বা যোগ্যতা নিয়ে নিশ্চিত হতে চাইলে সরাসরি অফিসে যোগাযোগ করুন।
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing">
+        <p data-i18n="closingLead">ভর্তি নিয়ে কোনো প্রশ্ন?</p>
+        <h2 data-i18n="closingTitle">অ্যাডমিশন অফিসে যোগাযোগ করুন।</h2>
+        <p data-i18n="closingCopy">
+          ফি, তারিখ বা যোগ্যতার ব্যাপারে নিশ্চিত হতে সরাসরি অফিসে কল বা ইমেইল করুন — রবি থেকে বৃহস্পতি, সকাল ৯টা থেকে বিকেল ৫টা।
+        </p>
+        <a class="light-button" href="#contact" data-i18n="closingCta">যোগাযোগের তথ্য →</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="footer-logo">Bayview International University</p>
+        <p data-i18n="footerTag">Learn · Innovate · Excel</p>
+      </div>
+      <p data-i18n="footerNote">
+        বেয়ভিউ ইন্টারন্যাশনাল ইউনিভার্সিটি একটি কাল্পনিক বিশ্ববিদ্যালয়, হ্যাকাথনের নমুনা তথ্যের জন্য তৈরি। সব তথ্য বিশ্ববিদ্যালয়ের দেওয়া ডেটা থেকে।
+      </p>
+      <div class="footer-links">
+        <a href="#about" data-i18n="navAbout">পরিচিতি</a>
+        <a href="chat.html" data-i18n="navChat">AI চ্যাট</a>
+        <a href="#departments" data-i18n="navDepartments">বিভাগ</a>
+        <a href="#checklist" data-i18n="navChecklist">চেকলিস্ট</a>
+        <a href="#contact" data-i18n="navContact">যোগাযোগ</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

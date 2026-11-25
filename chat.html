@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="UniQuery AI — বেয়ভিউ ইন্টারন্যাশনাল ইউনিভার্সিটির ভর্তি সহায়ক। এখানে চ্যাট করুন; আপনার সব চ্যাট ও তথ্য ব্রাউজারে সেভ থাকে।"
+    />
+    <title>UniQuery AI — চ্যাট</title>
+    <script>
+      try {
+        var storedTheme = localStorage.getItem('uniquery-theme')
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        document.documentElement.dataset.theme =
+          storedTheme === 'dark' || storedTheme === 'light' ? storedTheme : prefersDark ? 'dark' : 'light'
+      } catch (error) {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Noto+Serif+Bengali:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="app-page">
+    <div class="app-shell">
+      <aside class="side" id="side">
+        <div class="side-head">
+          <a class="side-logo" href="index.html">
+            <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.2l8 2.9v6.6c0 4.9-3.3 8.4-8 9.9-4.7-1.5-8-5-8-9.9V5.1l8-2.9z" fill="#39ff14" stroke="#0b0b0a" stroke-width="1.4" />
+              <path d="M8.3 12.1l2.6 2.6 5-5.2" fill="none" stroke="#0b0b0a" stroke-width="1.9" />
+            </svg>
+            UniQuery <span>AI</span>
+          </a>
+          <button type="button" id="new-chat" class="new-chat">
+            <span class="new-chat-plus" aria-hidden="true">+</span>
+            <span data-ui="newChat">নতুন চ্যাট</span>
+          </button>
+        </div>
+
+        <div class="side-list-wrap">
+          <p class="side-label" data-ui="chats">চ্যাটগুলো</p>
+          <div class="side-list" id="chat-list"></div>
+          <p class="side-empty" id="chat-list-empty" data-ui="noChats">এখনো কোনো চ্যাট নেই</p>
+        </div>
+
+        <div class="side-foot">
+          <div class="memory" id="memory">
+            <div class="memory-head">
+              <p class="side-label" data-ui="memory">মেমরি</p>
+              <button type="button" id="clear-memory" class="memory-clear" data-ui="clearMemory">মুছুন</button>
+            </div>
+            <div class="memory-body" id="memory-body"></div>
+          </div>
+          <a class="side-back" href="index.html" data-ui="back">← ভর্তি তথ্যে ফিরে যান</a>
+        </div>
+      </aside>
+
+      <div class="side-scrim" id="scrim" hidden></div>
+
+      <main class="main">
+        <header class="topbar">
+          <button type="button" id="side-toggle" class="icon-btn" aria-label="Menu">☰</button>
+          <div class="topbar-title">
+            <strong id="chat-title" data-ui="untitled">নতুন চ্যাট</strong>
+            <span class="model-chip" id="model-chip" data-ui="engine">ডেটা ইঞ্জিন</span>
+          </div>
+          <div class="topbar-actions">
+            <div class="lang-switch" role="group" aria-label="Language">
+              <button type="button" data-lang="bn" aria-pressed="true">বাং</button>
+              <button type="button" data-lang="en" aria-pressed="false">EN</button>
+            </div>
+            <button type="button" id="theme-toggle" class="icon-btn" aria-label="Theme">☾</button>
+          </div>
+        </header>
+
+        <div class="thread" id="thread">
+          <div class="thread-inner">
+            <div class="empty" id="empty">
+              <p class="empty-kicker">UniQuery AI</p>
+              <h1 data-ui="emptyTitle">কীভাবে সাহায্য করতে পারি?</h1>
+              <p class="empty-sub" data-ui="emptySub">
+                ভর্তি, ফি, স্কলারশিপ, হোস্টেল — বাংলা, English বা Banglish-এ লিখুন। আপনার চ্যাট ও তথ্য এখানেই সেভ থাকে।
+              </p>
+              <div class="empty-chips" id="suggestions"></div>
+            </div>
+            <div class="messages-app" id="messages" role="log" aria-live="polite"></div>
+          </div>
+        </div>
+
+        <div class="suggest-bar" id="suggest-bar" aria-label="Suggested questions" hidden></div>
+
+        <form class="composer-app" id="composer" autocomplete="off">
+          <div class="composer-wrap">
+            <textarea
+              id="input"
+              rows="1"
+              maxlength="2000"
+              data-ui-placeholder="placeholder"
+              placeholder="আপনার প্রশ্ন লিখুন… (বাংলা, English বা Banglish)"
+              aria-label="Your question"
+            ></textarea>
+            <button type="submit" id="send" class="send-btn" aria-label="Send">
+              <span aria-hidden="true">↑</span>
+            </button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script type="module" src="/src/chat.js"></script>
+  </body>
+</html>

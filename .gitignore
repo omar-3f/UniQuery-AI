@@ -1,0 +1,6 @@
+node_modules
+dist
+worker-build
+.env
+.env.local
+.DS_Store
