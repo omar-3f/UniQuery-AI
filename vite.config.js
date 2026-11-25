@@ -51,9 +51,10 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
   return {
     server: {
-      host: '127.0.0.1',
-      port: 5173,
-    },
+  host: '0.0.0.0',
+  port: 5173,
+  allowedHosts: ['uniquery-ai.onrender.com'],
+},
     build: {
       rollupOptions: {
         // The landing page (university information only) and the AI chat app
