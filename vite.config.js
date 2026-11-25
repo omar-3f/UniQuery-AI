@@ -1,9 +1,7 @@
+
 import { defineConfig, loadEnv } from 'vite'
 import { handleChat } from './src/server/chat.js'
 
-
-// Serves the chat API from the same dev server, so the page and the bot run on
-// one port. In production `worker/index.js` handles the same route.
 function chatApiPlugin(env) {
   return {
     name: 'uniquery-chat-api',
@@ -16,24 +14,32 @@ function chatApiPlugin(env) {
           return
         }
 
-
         try {
           const chunks = []
+
           if (req.method === 'POST') {
             for await (const chunk of req) chunks.push(chunk)
           }
 
-
           const request = new Request('http://127.0.0.1/api/chat', {
             method: req.method,
-            headers: { 'content-type': req.headers['content-type'] || 'application/json' },
-            body: req.method === 'POST' ? Buffer.concat(chunks) : undefined,
+            headers: {
+              'content-type':
+                req.headers['content-type'] || 'application/json',
+            },
+            body:
+              req.method === 'POST'
+                ? Buffer.concat(chunks)
+                : undefined,
           })
 
-
           const response = await handleChat(request, env)
+
           res.statusCode = response.status
-          response.headers.forEach((value, key) => res.setHeader(key, value))
+          response.headers.forEach((value, key) => {
+            res.setHeader(key, value)
+          })
+
           res.end(await response.text())
         } catch (error) {
           console.error('[chat api]', error)
@@ -46,24 +52,25 @@ function chatApiPlugin(env) {
   }
 }
 
-
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '')
+
   return {
     server: {
-      host: '127.0.0.1',
+      host: '0.0.0.0',
       port: 5173,
+      allowedHosts: ['uniquery-ai.onrender.com'],
     },
+
     build: {
       rollupOptions: {
-        // The landing page (university information only) and the AI chat app
-        // are two separate pages with their own markup.
         input: {
           main: 'index.html',
           chat: 'chat.html',
         },
       },
     },
+
     plugins: [chatApiPlugin(env)],
   }
 })
